@@ -1,4 +1,4 @@
-const catImg = document.querySelector("img");
+const catImg = document.querySelector(".current");
 const catArray = [];
 
 async function fetchCats() {
@@ -24,21 +24,17 @@ document.querySelector("button").onclick = fetchCats;
 document.querySelector("button").addEventListener(
   "click",
   () => {
-    const nextBtn = document.createElement("button");
     const prevBtn = document.createElement("button");
     prevBtn.textContent = "Previous cat";
-    document
-      .querySelector(".buttons")
-      .insertBefore(prevBtn, document.querySelector("button"));
-    prevBtn.onclick = function () {
-      catImg.src = catArray[catArray.indexOf(catImg.src) - 1];
+    if (!catArray.indexOf(catImg.src)) {
+      document
+        .querySelector(".buttons")
+        .insertBefore(prevBtn, document.querySelector("button"));
 
-      nextBtn.textContent = "Next cat";
-      document.querySelector(".buttons").appendChild(nextBtn);
-      nextBtn.onclick = function () {
-        catImg.src = catArray[catArray.indexOf(catImg.src) + 1];
+      prevBtn.onclick = function () {
+        catImg.src = catArray[catArray.indexOf(catImg.src) - 1];
       };
-    };
-  },
-  { once: true }
+    }
+  }
+  // { once: true }
 );

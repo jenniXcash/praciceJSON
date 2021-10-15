@@ -1,28 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:ital,wght@0,400;1,300&display=swap");
 body {
   position: relative;
+  background-color: #66c7f4;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  /* width: 500px; */
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-color: #6c6ea0;
+  padding: 20px;
+  border-radius: 5%;
+  box-shadow: 3px 0px 8px #000000;
 }
+
+.container::before {
+  position: absolute;
+  content: "Fetching cats as a hobby";
+  background-color: white;
+  width: 70%;
+  padding: 15px;
+  font-size: 2em;
+  top: -1em;
+  left: -2em;
+  font-weight: bolder;
+  box-shadow: 5px 5px black;
+}
+
 .images {
   height: 500px;
   width: 500px;
 }
 
 button {
-  align-self: center;
-  background-color: rgb(76, 228, 157);
-  color: black;
+  background-color: #fc4176;
+  color: white;
   border: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
+
+  font-size: 2rem;
   margin: 20px;
   padding: 10px;
+  box-shadow: 3px 0px 8px #000000;
 }
