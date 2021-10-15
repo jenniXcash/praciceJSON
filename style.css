@@ -1,0 +1,24 @@
+body {
+  position: relative;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.images {
+  height: 500px;
+  width: 500px;
+}
+.resized {
+  height: 500px;
+  width: 500px;
+}
+.buttons {
+  align-self: center;
+  margin-top: 20px;
+}
