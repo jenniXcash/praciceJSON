@@ -1,10 +1,11 @@
 body {
   position: relative;
 }
+
 .container {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  /* width: 500px; */
   position: absolute;
   left: 50%;
   top: 50%;
@@ -14,11 +15,14 @@ body {
   height: 500px;
   width: 500px;
 }
-.resized {
-  height: 500px;
-  width: 500px;
-}
-.buttons {
+
+button {
   align-self: center;
-  margin-top: 20px;
+  background-color: rgb(76, 228, 157);
+  color: black;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  margin: 20px;
+  padding: 10px;
 }

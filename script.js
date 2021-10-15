@@ -24,14 +24,20 @@ document.querySelector("button").onclick = fetchCats;
 document.querySelector("button").addEventListener(
   "click",
   () => {
+    const nextBtn = document.createElement("button");
     const prevBtn = document.createElement("button");
     prevBtn.textContent = "Previous cat";
     document
       .querySelector(".buttons")
       .insertBefore(prevBtn, document.querySelector("button"));
     prevBtn.onclick = function () {
-      // const currentLoc = catArray.indexOf(catImg.src);
       catImg.src = catArray[catArray.indexOf(catImg.src) - 1];
+
+      nextBtn.textContent = "Next cat";
+      document.querySelector(".buttons").appendChild(nextBtn);
+      nextBtn.onclick = function () {
+        catImg.src = catArray[catArray.indexOf(catImg.src) + 1];
+      };
     };
   },
   { once: true }
